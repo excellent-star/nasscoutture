@@ -76,8 +76,10 @@ class OrderController extends Controller
 
     public function list_orders()
     {
-        $all_orders = DB::table('commandes')
+        $all_orders = DB::table('commandes')->select('commandes.*','clients.*','commandes.id as commande_id')
         ->join('clients', 'commandes.client_id', '=', 'clients.id')->get();
+
+        // return $all_orders;
      
         return view('pages.list_orders',['all_orders'=>$all_orders]);
      

@@ -4,6 +4,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ClientSizesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneralController;
+use App\Http\Controllers\GenerateInvoice;
 use App\Http\Controllers\OrderController;
 
 /*
@@ -47,6 +48,8 @@ Route::get('/add-order/{client_id}/{sexe}/{veste}/{pantalon}/{jupe}/{robe}/{chem
 Route::post('/store-order', [OrderController::class, 'store_order'])->name('store_order');
 
 Route::get('/list-orders', [OrderController::class, 'list_orders'])->name('list_orders');
+
+Route::get('/print-invoice/{id}', [GenerateInvoice::class, 'print_invoice'])->name('print_invoice');
 
 
 
