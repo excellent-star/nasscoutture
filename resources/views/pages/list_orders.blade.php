@@ -66,7 +66,7 @@
                                                             
                                                             <a href="#" class="btn btn-primary shadow btn-xs sharp me-3 "><i class="fa fa-edit"></i></a>
 
-                                                            <a href="{{route('print_invoice',$order->commande_id)}}" class="btn btn-primary shadow btn-xs sharp me-3 "><i class="fas fa-print"></i></a>
+                                                            <a href="{{route('print_invoice',$order->commande_id)}}" target="_blank" class="btn btn-primary shadow btn-xs sharp me-3 "><i class="fas fa-print"></i></a>
 
                                                             <a href="#" class="btn btn-primary shadow btn-xs sharp me-1 "><i class="fas fa-eye"></i></a>
                                                     

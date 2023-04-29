@@ -37,11 +37,19 @@
 										<a ><img src="template_assets/images/nasscouture.png" alt=""></a>
 									</div>
                               
-                                    <form >
-                                     
+                                    <form action="{{ route('log_in')}}" method="POST">
+
+                                    
+                                       
+                                         @csrf
+                                        @if (session('status'))
+                                            <div class="alert alert-danger">
+                                                {{ session('status') }}
+                                            </div>
+                                        @endif
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Code de securité</strong></label>
-                                            <input type="password" class="form-control" value="Password" >
+                                            <input type="password" class="form-control" name="password" placeholder="mot  de passe" >
                                         </div>
                                        
                                         <div class="text-center">
@@ -71,11 +79,11 @@
 
           $(function(){
                
-                $("#submitButton").click(function(event){
-                        event.preventDefault()
+                // $("#submitButton").click(function(event){
+                //         event.preventDefault()
                   
-                       window.open("http://127.0.0.1:8000/dashboard","_self");
-                });
+                //        window.open("http://127.0.0.1:8000/dashboard","_self");
+                // });
                  
           });
     </script>

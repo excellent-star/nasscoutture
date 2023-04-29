@@ -49,6 +49,14 @@
                            
                         </ul>
                     </li>
+
+                    <li><a href="{{route('edit_password')}}" class="" aria-expanded="false">
+							<i class="fas fa-key"></i>
+							<span class="nav-text">Code sécurité</span>
+						</a>
+					</li>
+
+          
                   
                 </ul>
 				
