@@ -45,7 +45,7 @@
                                                 @foreach($clients as $client)
                                                 
                                                     <tr>
-                                                    <td><img class="rounded-circle" width="35" src="template_assets/images/profile/small/{{$client->sexe=='M'?'pic1.jpg':'pic10.jpg'}}" alt=""></td>
+                                                    <td><img class="rounded-circle" width="35" src="template_assets/images/profile/small/{{$client->sexe=='M'?'male_profile.png':'female_profile.png'}}" alt=""></td>
                                                     <td>{{$client->nom}}</td>
                                                     <td>{{$client->prenom}}</td>
                                                     <td>{{$client->sexe}}</td>
