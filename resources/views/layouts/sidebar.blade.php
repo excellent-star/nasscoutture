@@ -56,7 +56,13 @@
 						</a>
 					</li>
 
-          
+                    <li><a href="{{route('log_out')}}" class="" aria-expanded="false">
+                    <i class="fas fa-sign-out-alt"></i>
+							<span class="nav-text">Se deconnecter</span>
+						</a>
+					</li>
+
+                    
                   
                 </ul>
 				

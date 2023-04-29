@@ -15,7 +15,8 @@
 					
 					
 					<div class="col-xl-3 col-xxl-6 col-lg-6 col-sm-6">
-						<div class="widget-stat card">
+					   <a href="{{route('list_client')}}">
+					   <div class="widget-stat card">
 							<div class="card-body p-4">
 								<div class="media ai-icon">
 									<span class="me-3 bgl-primary text-primary">
@@ -33,9 +34,11 @@
 								</div>
 							</div>
 						</div>
+					   </a>
                     </div>
                     <div class="col-xl-3 col-xxl-6 col-lg-6 col-sm-6">
-                        <div class="widget-stat card">
+                        <a href="#">
+						<div class="widget-stat card">
 							<div class="card-body p-4">
 								<div class="media ai-icon">
 								<span class="me-3 bgl-primary text-primary">
@@ -53,9 +56,11 @@
 								</div>
 							</div>
 						</div>
+						</a>
                     </div>
                     <div class="col-xl-3 col-xxl-6 col-lg-6 col-sm-6">
-                        <div class="widget-stat card">
+                       <a href="#">
+					   <div class="widget-stat card">
 							<div class="card-body  p-4">
 								<div class="media ai-icon">
 								<span class="me-3 bgl-primary text-primary">
@@ -73,9 +78,11 @@
 								</div>
 							</div>
 						</div>
+					   </a>
                     </div>
                     <div class="col-xl-3 col-xxl-6 col-lg-6 col-sm-6">
-                        <div class="widget-stat card">
+                       <a href="#">
+					   <div class="widget-stat card">
 							<div class="card-body p-4">
 								<div class="media ai-icon">
 								<span class="me-3 bgl-primary text-primary">
@@ -93,10 +100,12 @@
 								</div>
 							</div>
 						</div>
+					   </a>
                     </div>
 					
 					<div class="col-xl-3 col-xxl-6 col-lg-6 col-sm-6">
-						<div class="widget-stat card bg-danger">
+						 <a href="{{route('list_orders')}}">
+						 <div class="widget-stat card bg-danger">
 							<div class="card-body  p-4">
 								<div class="media">
 									<span class="me-3">
@@ -109,8 +118,10 @@
 								</div>
 							</div>
 						</div>
+						 </a>
                     </div>
 					<div class="col-xl-3 col-xxl-6 col-lg-6 col-sm-6">
+						<a href="#">
 						<div class="widget-stat card bg-success">
 							<div class="card-body p-4">
 								<div class="media">
@@ -124,6 +135,7 @@
 								</div>
 							</div>
 						</div>
+						</a>
                     </div>
 					
 				

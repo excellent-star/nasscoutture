@@ -123,6 +123,15 @@
                                                     <td> <input readonly id="reste_input"  type="number" class="form-control" min="0"/></td>
                                                
                                             </tr>
+
+                                            <tr>
+                                                <td>   
+                                                      <p> La date de retrait des articles</p>
+                                                    </td>
+                                                
+                                                    <td> <input id="retrait_date_input"  type="date" class="form-control" min="0"/></td>
+                                               
+                                            </tr>
                                           
                                            
                                            
@@ -387,6 +396,10 @@
                         var avance = $("#avance_input").val();
 
                         var reste = $("#reste_input").val();
+                        var date_retrait = $('#retrait_date_input').val();
+
+                     
+                        
 
                         if(avance!=null)
                         {
@@ -399,6 +412,18 @@
                                 )
                                 return;
                              }
+                        }
+
+                        if(date_retrait=="")
+                        {
+                            
+                                Swal.fire(
+                                'Validation',
+                                'la date de retrait est obligatoire',
+                                'warning'
+                                )
+                                return;
+                             
                         }
 
 
@@ -429,8 +454,10 @@
                                         formData.append("client_id",$("input[name=client_id]").val());
                                         formData.append("avance",avance);
                                         formData.append("reste",reste);
+                                        formData.append("date_retrait",date_retrait);
                                         formData.append("total_commande",total_commande);
                                         formData.append('order_data', JSON.stringify(_dataToSend));
+
 
                                       
                                         $.ajax({

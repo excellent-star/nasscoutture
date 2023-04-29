@@ -449,12 +449,23 @@ kbd {
 figure {
   margin: 0 0 1rem; }
 
+
+
+
 img,
 svg {
   vertical-align: middle;
   width: 80px;
   height: 70px;
 }
+
+.icon-logout {
+  vertical-align: middle;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+
 
 table {
   caption-side: bottom;

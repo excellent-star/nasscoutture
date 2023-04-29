@@ -52,9 +52,9 @@
                                                 
                                                     <tr>
                                                    
-                                                    <td>{{$order->datedepot}}</td>
-                                                    <td>{{$order->dateretrait==null?'Rien':$order->dateretrait}}</td>
-                                                    <td>{{$order->dateretire==null?'Pas encore':$order->dateretrait}}</td>
+                                                    <td>{{date("d-m-Y", strtotime($order->datedepot))}}</td>
+                                                    <td>{{$order->dateretrait==null?'Rien': date("d-m-Y", strtotime($order->dateretrait))}}</td>
+                                                    <td>{{$order->dateretire==null?'Pas encore':date("d-m-Y", strtotime($order->dateretire))}}</td>
                                                     <td>{{$order->facture}}</td>
                                                     <td>{{$order->montant_total}}</td>
                                                     <td>{{$order->nom}}</td>

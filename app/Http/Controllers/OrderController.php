@@ -31,6 +31,7 @@ class OrderController extends Controller
 
             $order = new Order();
             $order->facture = $facture;
+            $order->dateretrait = $request->date_retrait;
             $order->datedepot = date('Y-m-d');
             $order->client_id = $client_id;
             $order->montant_total = $request->total_commande;
