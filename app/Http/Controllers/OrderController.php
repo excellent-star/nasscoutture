@@ -86,6 +86,19 @@ class OrderController extends Controller
      
     }
 
+    public function list_today_order()
+    {
+        $today_date = date('Y-m-d');
+       
+        $all_orders = DB::table('commandes')->select('commandes.*','clients.*','commandes.id as commande_id')
+        ->where(['dateretrait'=>$today_date,'dateretire'=>null])
+        ->join('clients', 'commandes.client_id', '=', 'clients.id')->get();
+
+        // return $all_orders;
+     
+        return view('pages.list_orders',['all_orders'=>$all_orders]);
+    }
+
 
 
 

@@ -30,6 +30,11 @@ Route::middleware(['checkloggeduser'])->group(function(){
     Route::get('/list-client', [ClientController::class, 'list_client'])->name('list_client');
     Route::get('/man-sizes/{user_id}', [ClientSizesController::class, 'man_sizes'])->name('man_sizes');
     Route::get('/woman-sizes/{user_id}', [ClientSizesController::class, 'woman_sizes'])->name('woman_sizes');
+
+    Route::get('/list-male', [ClientController::class, 'list_male'])->name('list_male');
+    Route::get('/list-female', [ClientController::class, 'list_female'])->name('list_female');
+
+    Route::get('/list-today-order', [OrderController::class, 'list_today_order'])->name('list_today_order');
     
     Route::post('/save-man-veste-size', [ClientSizesController::class, 'save_man_veste_size'])->name('save_man_veste_size');
     Route::post('/save-man-pantalon-size', [ClientSizesController::class, 'save_man_pantalon_size'])->name('save_man_pantalon_size');

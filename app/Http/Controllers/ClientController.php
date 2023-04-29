@@ -117,6 +117,18 @@ class ClientController extends Controller
 
     }
 
+    public function list_male(){
+
+        $clients = Client::orderBy('id', 'DESC')->where('sexe','M')->get();
+        return view('pages.list_client',['clients'=>$clients]);
+    }
+
+    public function list_female()
+    {
+        $clients = Client::orderBy('id', 'DESC')->where('sexe','F')->get();
+        return view('pages.list_client',['clients'=>$clients]);
+    }
+
 
 
 }

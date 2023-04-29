@@ -67,7 +67,7 @@
                                                                 <div class="col-xl-4 col-xxl-6 col-6">
                                                                     <div class="form-check custom-checkbox mb-3 checkbox-info">
                                                                         <input type="checkbox" class="form-check-input"  id="pantalon_check_input" required="">
-                                                                        <label class="form-check-label" for="customCheckBox2">Pantalon <span><input type="number" value="1" style="width: 50px;height: 20px;border: 1px sold #886CC0;border-radius: 2px 2px 2px 2px;border: 1px solid lightgray;padding: 5px;" min="1"  id="veste_quantity_input" required=""></span></label>
+                                                                        <label class="form-check-label" for="customCheckBox2">Pantalon <span><input type="number" value="1" style="width: 50px;height: 20px;border: 1px sold #886CC0;border-radius: 2px 2px 2px 2px;border: 1px solid lightgray;padding: 5px;" min="1"  id="pantalon_quantity_input" required=""></span></label>
                                                                     </div>
                                                                 </div>
                                                               

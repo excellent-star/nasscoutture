@@ -16,6 +16,8 @@
                         <ul aria-expanded="false">
                             <li><a href="{{ route('add_client') }}">Ajouter un client</a></li>
                             <li><a href="{{ route('list_client') }}">Liste des clients</a></li>
+                            <li><a href="{{ route('list_male') }}">Liste des hommes</a></li>
+                            <li><a href="{{ route('list_female') }}">Liste des femmes</a></li>
 						
                             <!-- <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
                                 <ul aria-expanded="false">
@@ -45,7 +47,8 @@
 							<span class="nav-text">Commandes</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{route('list_orders')}}">Commandes</a></li>
+                            <li><a href="{{route('list_orders')}}">Liste commandes</a></li>
+                            <li><a href="{{route('list_today_order')}}">Articles à retirer aujourd'hui</a></li>
                            
                         </ul>
                     </li>
