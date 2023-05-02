@@ -206,7 +206,7 @@
                                                         <p class="card-text text-dark d-inline"><a id="save_veste" class="btn btn-sm btn-primary">Mettre à jour</a></p>
                                                     </div>
 
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary">Imprimer</a>
+                                                    <a target="_blank" href="{{route('print_client_sizes', ['client_id' => $client->id, 'article' => 'veste'])}}" class="btn btn-sm btn-primary">Imprimer</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -280,7 +280,7 @@
                                                         <p class="card-text text-dark d-inline"><a id="save_pantalon" class="btn btn-sm btn-primary">Mettre à jour</a></p>
                                                     </div>
 
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary">Imprimer</a>
+                                                    <a target="_blank" href="{{route('print_client_sizes', ['client_id' => $client->id, 'article' => 'pantalon'])}}" class="btn btn-sm btn-primary">Imprimer</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -345,7 +345,7 @@
                                                         <p class="card-text text-dark d-inline"><a id="save_jupe" class="btn btn-sm btn-primary">Mettre à jour</a></p>
                                                     </div>
 
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary">Imprimer</a>
+                                                    <a target="_blank" href="{{route('print_client_sizes', ['client_id' => $client->id, 'article' => 'jupe'])}}" class="btn btn-sm btn-primary">Imprimer</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -435,7 +435,7 @@
                                                         <p class="card-text text-dark d-inline"><a id="save_robe" class="btn btn-sm btn-primary">Mettre à jour</a></p>
                                                     </div>
 
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary">Imprimer</a>
+                                                    <a target="_blank" href="{{route('print_client_sizes', ['client_id' => $client->id, 'article' => 'robe'])}}" class="btn btn-sm btn-primary">Imprimer</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -538,7 +538,7 @@
                                                         <p class="card-text text-dark d-inline"><a id="save_chemise" class="btn btn-sm btn-primary">Mettre à jour</a></p>
                                                     </div>
 
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary">Imprimer</a>
+                                                    <a target="_blank" href="{{route('print_client_sizes', ['client_id' => $client->id, 'article' => 'chemise'])}}" class="btn btn-sm btn-primary">Imprimer</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -592,6 +592,7 @@
                                                                 <label>Col</label>
                                                                 <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->f_col_tun:0}}" name="f_col_tun" type="number" min="0" class="form-control">
                                                             </div>
+
                                                          
                                                         </div>
                                                         <div class="row">
@@ -629,7 +630,7 @@
                                                         <p class="card-text text-dark d-inline"><a id="save_tunique" class="btn btn-sm btn-primary">Mettre à jour</a></p>
                                                     </div>
 
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary">Imprimer</a>
+                                                    <a target="_blank" href="{{route('print_client_sizes', ['client_id' => $client->id, 'article' => 'tunique'])}}" class="btn btn-sm btn-primary">Imprimer</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -60,6 +60,8 @@ Route::middleware(['checkloggeduser'])->group(function(){
     
     Route::get('/print-invoice/{id}', [GenerateInvoice::class, 'print_invoice'])->name('print_invoice');
 
+    Route::get('/print-client-sizes/{client_id}/{article}', [GenerateInvoice::class, 'print_client_sizes'])->name('print_client_sizes');
+
 
     Route::get('/edit-password', [GeneralController::class, 'edit_password'])->name('edit_password');
     Route::post('/update-password', [GeneralController::class, 'update_password'])->name('update_password');

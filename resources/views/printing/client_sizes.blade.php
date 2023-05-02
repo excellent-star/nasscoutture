@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facture</title>
+    <title>Mesures clients</title>
 </head>
 <style>
 
@@ -97,30 +97,13 @@
 
 
             <table>
-                        <tr>
-                                <td>P  :    -----------------------------------------  </td>
-                                <td><span>{{ (isset($data) && !empty($data))?$data->mesure->page:"" }}</span></td>
-                        </tr>
+                       
                         <tr>
                                 <td>Nom/Prénom :  -----------------------------------------  </td>
                                 <td><span>{{ (isset($data) && !empty($data))?$data->nom.' '.$data->prenom:"" }}</span></td>
                         </tr>
-                        <tr>
-                                <td>Numéro Facture:  -----------------------------------------   </td>
-                                <td><span>{{ (isset($data) && !empty($data))?$data->mesure->page:"" }}</span></td>
-                        </tr>
-                        <tr>
-                                <td>Numéro Page: -----------------------------------------   </td>
-                                <td><span>{{ (isset($data) && !empty($data))?$data->mesure->page:"" }}</span></td>
-                        </tr>
-                        <tr>
-                                <td>Date de dépot: -----------------------------------------     </td>
-                                <td><span>10/02/2023</span></td>
-                        </tr>
-                        <tr >
-                                <td>Date de retrait: -----------------------------------------    </td>
-                                <td><span>10/02/2023</span></td>
-                        </tr>
+                      
+            
 
                         <tr id="space" >
                                 <td>  </td>

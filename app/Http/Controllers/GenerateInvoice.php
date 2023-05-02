@@ -24,6 +24,12 @@ class GenerateInvoice extends Controller
             $pdf = PDF::loadView('printing.invoice_order', ['order'=>$order,'articles'=>$articles,'avance'=>$avance]);
             return $pdf->stream('my.pdf',array('Attachment'=>false));
    }
+
+   public function print_client_sizes($client_id,$article)
+   {
+            $pdf = PDF::loadView('printing.client_sizes', []);
+            return $pdf->stream('my.pdf',array('Attachment'=>false));
+   }
       
    
 }
