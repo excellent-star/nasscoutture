@@ -54,6 +54,9 @@ Route::middleware(['checkloggeduser'])->group(function(){
     Route::post('/store-order', [OrderController::class, 'store_order'])->name('store_order');
     
     Route::get('/list-orders', [OrderController::class, 'list_orders'])->name('list_orders');
+    Route::get('/edit-order/{id}', [OrderController::class, 'edit_order'])->name('edit_order');
+
+    Route::post('/update-order/{id}', [OrderController::class, 'update_order'])->name('update_order');
     
     Route::get('/print-invoice/{id}', [GenerateInvoice::class, 'print_invoice'])->name('print_invoice');
 

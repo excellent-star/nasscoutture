@@ -64,7 +64,7 @@
                                                     <td>
                                                         <div class="d-flex">
                                                             
-                                                            <a href="#" class="btn btn-primary shadow btn-xs sharp me-3 "><i class="fa fa-edit"></i></a>
+                                                            <a href="{{route('edit_order',$order->commande_id)}}" class="btn btn-primary shadow btn-xs sharp me-3 "><i class="fa fa-edit"></i></a>
 
                                                             <a href="{{route('print_invoice',$order->commande_id)}}" target="_blank" class="btn btn-primary shadow btn-xs sharp me-3 "><i class="fas fa-print"></i></a>
 

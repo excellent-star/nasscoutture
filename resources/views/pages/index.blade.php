@@ -59,7 +59,7 @@
 						</a>
                     </div>
                     <div class="col-xl-3 col-xxl-6 col-lg-6 col-sm-6">
-                       <a href="{{'list_male'}}">
+                       <a href="{{route('list_male')}}">
 					   <div class="widget-stat card">
 							<div class="card-body  p-4">
 								<div class="media ai-icon">

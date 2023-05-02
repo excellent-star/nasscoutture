@@ -285,7 +285,7 @@
 
                             var _prix_unitaire = tr_children[2].children[0].attributes[0].nodeValue;
 
-                            _prix_unit = parseInt(_prix_unit);
+                            _prix_unit = parseInt(_prix_unitaire);
                             _quantity = parseInt(_quantity);
 
                             var article = tr_children[0].innerText;
@@ -410,6 +410,7 @@
                                 'l\'avance d\'argent est superieure ou la même chose que la somme total, donc retire l\'avance',
                                 'warning'
                                 )
+                                _dataToSend= [];
                                 return;
                              }
                         }
@@ -422,6 +423,7 @@
                                 'la date de retrait est obligatoire',
                                 'warning'
                                 )
+                                _dataToSend= [];
                                 return;
                              
                         }
@@ -470,6 +472,8 @@
                                             processData: false,
                                             success:function(response)
                                             {
+
+                                                _dataToSend= [];
                                                 Swal.fire(
                                                     'Commande',
                                                     response.message,
@@ -485,10 +489,13 @@
                                                     'Une erreur s\'produite',
                                                     'warning'
                                                     )
+                                                    _dataToSend= [];
                                             }
                                         });
 
 
+                                    }else{
+                                        _dataToSend= [];
                                     }
                                     });
                         

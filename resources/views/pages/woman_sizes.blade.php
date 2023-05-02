@@ -103,7 +103,7 @@
                                                  </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Annuler</button>
                                                     <button type="button" id="make_order_button" class="btn btn-primary">Faire la commande</button>
                                                 </div>
                                                 </form>
@@ -146,23 +146,7 @@
                                                     <form>
 
                                                         <div class="row d-flex align-items-center">
-                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
-                                                                <label class="form-label">Epaule</label>
-                                                                <input type="hidden" value="{{$client->id}}" name="client_id"/>
-                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->epaulev:0}}" type="number" min="0" name="epaulev" class="form-control" >
-                                                            </div>
-                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
-                                                                <label class="form-label">Longueur manche</label>
-                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->longueurmanchev:0}}" name="longueurmanchev" type="number" min="0" class="form-control" >
-                                                            </div>
-                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
-                                                                <label class="form-label">Tour de poitrine</label>
-                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->tourpoitrinev:0}}" name="tourpoitrinev"type="number" min="0" class="form-control" >
-                                                            </div>
-                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
-                                                                <label class="form-label">Tour de Taille</label>
-                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->tourtaillev:0}}" name="tourtaillev"type="number" min="0" class="form-control" >
-                                                            </div>
+                                                            
                                                             <div class="mb-1 col-md-1" style="flex-grow:2;">
                                                                 <label>Longueur Pince</label>
                                                                 <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->longueurpincev:0}}" name="longueurpincev" type="number" min="0" class="form-control">
@@ -185,6 +169,25 @@
                                                                 <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->colv:0}}" name="colv" type="number" min="0" class="form-control">
                                                             </div>
                                                          
+                                                        </div>
+                                                        <div class="row">
+                                                        <div class="mb-1 col-md-1" style="flex-grow:2;">
+                                                                <label class="form-label">Epaule</label>
+                                                                <input type="hidden" value="{{$client->id}}" name="client_id"/>
+                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->epaulev:0}}" type="number" min="0" name="epaulev" class="form-control" >
+                                                            </div>
+                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
+                                                                <label class="form-label">Longueur manche</label>
+                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->longueurmanchev:0}}" name="longueurmanchev" type="number" min="0" class="form-control" >
+                                                            </div>
+                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
+                                                                <label class="form-label">Tour de poitrine</label>
+                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->tourpoitrinev:0}}" name="tourpoitrinev"type="number" min="0" class="form-control" >
+                                                            </div>
+                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
+                                                                <label class="form-label">Tour de Taille</label>
+                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->tourtaillev:0}}" name="tourtaillev"type="number" min="0" class="form-control" >
+                                                            </div>
                                                         </div>
                                                         <div class="row mt-5">
                                                             
@@ -373,22 +376,7 @@
                                                     <form>
 
                                                         <div class="row d-flex align-items-center">
-                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
-                                                                <label class="form-label">Epaule</label>
-                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->epauler:0}}" type="number" min="0" name="epauler" class="form-control" >
-                                                            </div>
-                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
-                                                                <label class="form-label">Longueur Manche</label>
-                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->longueurmancher:0}}" name="longueurmancher"type="number" min="0" class="form-control" >
-                                                            </div>
-                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
-                                                                <label class="form-label">Tour de Pointrine</label>
-                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->tourpoitriner:0}}" name="tourpoitriner" type="number" min="0" class="form-control" >
-                                                            </div>
-                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
-                                                                <label>Tour de Taille</label>
-                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->tourtailler:0}}" name="tourtailler" type="number" min="0" class="form-control">
-                                                            </div>
+                                                            
                                                             <div class="mb-1 col-md-1" style="flex-grow:2;">
                                                                 <label>Longueur Pince</label>
                                                                 <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->longueurpincer:0}}" name="longueurpincer" type="number" min="0" class="form-control">
@@ -411,6 +399,24 @@
                                                             </div>
                                                             
                                                          
+                                                        </div>
+                                                        <div class="row">
+                                                        <div class="mb-1 col-md-1" style="flex-grow:2;">
+                                                                <label class="form-label">Epaule</label>
+                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->epauler:0}}" type="number" min="0" name="epauler" class="form-control" >
+                                                            </div>
+                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
+                                                                <label class="form-label">Longueur Manche</label>
+                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->longueurmancher:0}}" name="longueurmancher"type="number" min="0" class="form-control" >
+                                                            </div>
+                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
+                                                                <label class="form-label">Tour de Pointrine</label>
+                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->tourpoitriner:0}}" name="tourpoitriner" type="number" min="0" class="form-control" >
+                                                            </div>
+                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
+                                                                <label>Tour de Taille</label>
+                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->tourtailler:0}}" name="tourtailler" type="number" min="0" class="form-control">
+                                                            </div>
                                                         </div>
                                                         <div class="row mt-5">
                                                             
@@ -565,22 +571,7 @@
                                                     <form>
 
                                                         <div class="row d-flex align-items-center">
-                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
-                                                                <label class="form-label">Epaule</label>
-                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->f_epaule_tun:0}}" type="number" min="0" name="f_epaule_tun" class="form-control" >
-                                                            </div>
-                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
-                                                                <label class="form-label">Longueur manche</label>
-                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->f_loongueurmanche_tun:0}}" name="f_loongueurmanche_tun"type="number" min="0" class="form-control" >
-                                                            </div>
-                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
-                                                                <label class="form-label">poitrine</label>
-                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->f_poitrine_tun:0}}"  name="f_poitrine_tun"type="number" min="0" class="form-control" >
-                                                            </div>
-                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
-                                                                <label>ventre</label>
-                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->ff_ventre_tun:0}}" name="ff_ventre_tun" type="number" min="0" class="form-control">
-                                                            </div>
+                                                            
                                                             <div class="mb-1 col-md-1" style="flex-grow:2;">
                                                                 <label>Longueur Haut</label>
                                                                 <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->f_longueurhhaut_tun:0}}" name="f_longueurhhaut_tun" type="number" min="0" class="form-control">
@@ -602,6 +593,24 @@
                                                                 <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->f_col_tun:0}}" name="f_col_tun" type="number" min="0" class="form-control">
                                                             </div>
                                                          
+                                                        </div>
+                                                        <div class="row">
+                                                        <div class="mb-1 col-md-1" style="flex-grow:2;">
+                                                                <label class="form-label">Epaule</label>
+                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->f_epaule_tun:0}}" type="number" min="0" name="f_epaule_tun" class="form-control" >
+                                                            </div>
+                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
+                                                                <label class="form-label">Longueur manche</label>
+                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->f_loongueurmanche_tun:0}}" name="f_loongueurmanche_tun"type="number" min="0" class="form-control" >
+                                                            </div>
+                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
+                                                                <label class="form-label">poitrine</label>
+                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->f_poitrine_tun:0}}"  name="f_poitrine_tun"type="number" min="0" class="form-control" >
+                                                            </div>
+                                                            <div class="mb-1 col-md-1" style="flex-grow:2;">
+                                                                <label>ventre</label>
+                                                                <input value="{{(isset($client_sizes) && !empty($client_sizes))?$client_sizes->ff_ventre_tun:0}}" name="ff_ventre_tun" type="number" min="0" class="form-control">
+                                                            </div>
                                                         </div>
                                                         <div class="row mt-5">
                                                             

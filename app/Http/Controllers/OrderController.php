@@ -24,7 +24,7 @@ class OrderController extends Controller
     {
             $order_data = json_decode($request->order_data);
 
-            
+           
 
             $facture = (string)(time()+rand(1,1000));
             $client_id = $request->client_id;
@@ -97,6 +97,72 @@ class OrderController extends Controller
         // return $all_orders;
      
         return view('pages.list_orders',['all_orders'=>$all_orders]);
+    }
+
+
+    public function edit_order($id)
+    {
+        $articles = Article::where('commande_id',$id)->get();
+        $avance = Avance::where('commande_id',$id)->first();
+        $order = Order::find($id);
+        return view('pages.edit_order',['articles'=>$articles,'order'=>$order,'avance'=>$avance]);
+    }
+
+    public function update_order(Request $request){
+
+
+
+        $order_data = json_decode($request->order_data);
+
+            // return $request;
+
+        // $facture = (string)(time()+rand(1,1000));
+        $client_id = $request->client_id;
+        $order_id = $request->order_id;
+
+
+        $order = Order::find($order_id);
+        // $order->facture = $facture;
+        $order->dateretrait = $request->date_retrait;
+        // $order->datedepot = date('Y-m-d');
+        // $order->client_id = $client_id;
+        $order->montant_total = $request->total_commande;
+        $order->save();
+
+        // id	qte	designation	pu	remise	commande_id	
+
+       
+
+        foreach ($order_data as $item) { 
+             $article = Article::find($item->article_id);
+             $article->qte = $item->quantity;
+             $article->pu = $item->price;
+             $article->save();
+            
+          }
+
+        //   id	montantav	dateav	reste	commande_id	
+
+
+          
+
+         if($request->avance!=0 & $request->reste!=0)
+         {
+            $avance = Avance::find($request->avance_id);
+            $avance->montantav = (double)$request->avance;
+            // $avance->dateav = date('Y-m-d');
+            $avance->reste = (double)$request->reste;
+            // $avance->commande_id = $order->id;
+            $avance->save();
+
+         }
+
+        return response()->json([
+            'message' => 'la commande est mise à jour avec succès',
+            'state' => 'ok',
+        ],200);
+
+
     }
 
 
