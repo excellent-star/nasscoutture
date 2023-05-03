@@ -159,11 +159,11 @@
                     @if($avance!=null)
 
                     <tr>
-                                <td>Avance :        <span>{{ (isset($avance) && !empty($avance))?$avance->avance:"" }}</span></td>
+                                <td>Avance :        <span>{{ (isset($avance) && !empty($avance))?$avance->montantav:"" }}</span></td>
                                 <td></td>
                     </tr>
                     <tr>
-                                <td>Reste :     <span>{{ (isset($avance) && !empty($avance))?$order->reste:"" }}</span></td>
+                                <td>Reste :     <span>{{ (isset($avance) && !empty($avance))?$avance->reste:"" }}</span></td>
                                 <td></td>
                     </tr>
                     @endif
